@@ -1,13 +1,18 @@
 <!-- I selettori CSS ti aiutano a selezionare elementi HTML tramite CSS e JavaScript.
 
-Con questi esercizi farai pratica nell'utilizzarli sia per modificare lo stile di elementi HTML sia nel selezionarli per manipolarli via JavaScript
-I selettori CSS sono estremamente utili per selezionare nodi del DOM con precisione grazie al fatto che funzionano perfettamente con querySelector,
-senza necessità di scrivere algoritmi più complessi per arrivare allo stesso risultato.
+Con questi esercizi farai pratica nell'utilizzarli sia per modificare lo stile di elementi HTML sia nel selezionarli per manipolarli
+ via JavaScript 
+I selettori CSS sono estremamente utili per selezionare nodi del DOM con precisione grazie al fatto che funzionano perfettamente 
+con querySelector, senza necessità di scrivere algoritmi più complessi per arrivare allo stesso risultato.
 
 
-IMPORTANTE: NON PUOI inserire classi o id aggiuntivi nell'HTML, devi usare solo quello che già c'è. Non puoi cambiare la struttura in nessuna maniera. L'obiettivo è quello di usare Selettori e Combinatori per arrivare a selezionare l'elemento di interesse per poi manipolarlo nello stile o nella struttura con JS.
+IMPORTANTE: NON PUOI inserire classi o id aggiuntivi nell'HTML, devi usare solo quello che già c'è. Non puoi cambiare la struttura 
+in nessuna maniera. L'obiettivo è quello di usare Selettori e Combinatori per arrivare a selezionare l'elemento di interesse per 
+poi manipolarlo nello stile o nella struttura con JS.
 
-Per testare i Selettori CSS puoi cambiare all'elemento che stai cercando di selezionare il colore, colore di sfondo, aggiungere un bordo colorato ecc. Se il selettore è corretto vedrai applicare quello stile all'elemento, se non succede significa che il selettore non è corretto o qualche altra regola CSS sta prevalendo. Controlla sempre dall'inspector del browser.
+Per testare i Selettori CSS puoi cambiare all'elemento che stai cercando di selezionare il colore, colore di sfondo, aggiungere un 
+bordo colorato ecc. Se il selettore è corretto vedrai applicare quello stile all'elemento, se non succede significa che il 
+selettore non è corretto o qualche altra regola CSS sta prevalendo. Controlla sempre dall'inspector del browser.
 
 ESERCIZIO 1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron
 ESERCIZIO 2) Crea un selettore per selezionare tutti i figli dell'elemento navbar
@@ -31,8 +36,9 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
 
 <head>
     <style>
-
+        /* I'll be using a separate css file */
     </style>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -389,12 +395,15 @@ ESERCIZIO 12) Crea un selettore per selezionare il secondo link del footer
     </footer>
 
     <a href="#" class="float-right mb-3 mr-3">Torna su</a>
-    <script>
+    <script src="scripts.js">
         /* JS Exercises should go here */
-
-        // EXTRA Crea con JavaScript la funzionalità per rimuovere il link "twitter" sotto alla sezione "Altro" nell'elemento "aside". Deve avvenire al caricamento della pagina, automticamente.
-        // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
-        // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
+        // I'll be using a separate javascript file
+        // EXTRA Crea con JavaScript la funzionalità per rimuovere il link "twitter" sotto alla sezione "Altro" nell'elemento 
+        // "aside". Deve avvenire al caricamento della pagina, automticamente.
+        // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link 
+        //"Continua a leggere".
+        // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa 
+        // sopra l'autore del post.
 
     </script>
 </body>

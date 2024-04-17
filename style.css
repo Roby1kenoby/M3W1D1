@@ -1,0 +1,111 @@
+
+/*1) Crea un selettore per selezionare l'<h1> nella sezione "hero", ovvero nel jumbotron 
+    I could be using a more specific selector, but usually we have only one h1 tag, so I'll keep it simple */
+h1{
+    color: red;
+}
+
+/*2) Crea un selettore per selezionare tutti i figli dell'elemento navbar
+    I could be using span directly as a selector, because there are no other span in the page, beside the one in the nav bar,
+        but to be sure I've decided to be more specific and use the nav selector */
+nav span{
+    color: rgb(185, 30, 185);
+}
+
+/*3) Crea un selettore per selezionare il link "Continua a leggere" del jumbotron
+    This is the only link inside the jumbotron, so no need to be more specific */
+.jumbotron a {
+    color: orange;
+}
+
+/*4) Crea un selettore per selezionare il primo blog post
+    Since the first blog-post is the only one near the H3 title "from the hose", i use the + to get it*/
+
+h3 + div.blog-post {
+    border: 1px solid black;
+}
+
+/*5) Crea un selettore per selezionare l'<hr> del primo blog post e colorarlo di rosso
+    Building on the previous selector, I target the specific hr inside the first blogpost*/
+h3 + div.blog-post hr{
+    background-color: red;
+    height: 2em;
+}
+
+/*6) Crea un selettore per selezionare i link pari della navbar 
+    The upper navbar has no links, so I'll be selecting spans instead, and underline them. */
+
+nav span:nth-child(even){
+    text-decoration: underline;
+}
+
+/* If the intended links are the one in the blog-pagination nav, here is the selector. */
+
+/* .blog-pagination a:nth-child(even){
+    text-decoration: underline;
+} */
+
+/*7) Crea un selettore per selezionare tutti gli <li> della prima "ordered-list" della sidebar ("Archivio") 
+    I wanted to try with the easy way (nth child) and by using has and not pseudo-classes.
+    With the has\not i've decided to target the first div that doesn't have an ol inside him,
+    then checking the next direct div which has a list element in it.
+    Both way work out well     
+    */
+
+/* aside div:nth-child(2) li{
+    border: 1px solid black;
+} */
+
+aside div:not(:has(ol))+div li{
+    border: 1px solid black;
+}
+
+/*8) Crea un selettore per selezionare l'autore del secondo blog post 
+    using blog-post class to find the right one with nth-child, then searching the only a
+    inside the blog-post-meta class
+*/
+
+.blog-post:nth-child(3) .blog-post-meta a{
+    color: red;
+}
+
+
+/* 9) Crea un selettore per selezionare il secondo <li> della lista del terzo blog post 
+    I've used the last of type pseudo-class because there where only 3 blog post and it was the 
+    last one.
+    I also could use nth-child, to be sure to target the right element with more blog posts
+*/
+.blog-post:last-of-type li:nth-child(2){
+    color: red;
+}
+
+/* .blog-post:nth-child(4) li:nth-child(2){
+    color: red;
+} */
+
+
+/*10) Crea un selettore per selezionare il link "Torna su" che trovi a fondo pagina nell'angolo in basso a destra
+    Since it's the last element of the page, but i've added the script tag to load my js file, 
+    I've decided to target the footer and get the subsequent element a
+*/
+
+footer + a{
+    color:red;
+}
+
+
+/* 11) Crea un selettore per selezionare il bottone "Nuovi" che trovi in basso
+    I could be using also nth-child(2)
+*/
+
+.blog-pagination .btn:last-of-type{
+    background-color: red;
+}
+
+/* 12) Crea un selettore per selezionare il secondo link del footer 
+    I also could be using a:last-of-type
+*/
+
+footer a:nth-child(2){
+    color: red;
+}
